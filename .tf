@@ -8,9 +8,9 @@ terraform {
 }
 
 provider "aws" {
-   access_key = "AKIA247OJI2J5QT2L577"
+   access_key = "AKIAXY2D5AAHWTTFUTEU"
 
-  secret_key = "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"
+  secret_key = "8y45DlEAi7wfA3VziRgS0oA9iaGLk7sAM3tmsY3E"
   
   region     = "ap-south-1"
 }
@@ -97,7 +97,7 @@ resource "aws_instance" "ubuntu_1" {
   associate_public_ip_address = true
   subnet_id = aws_subnet.Pub.id
   vpc_security_group_ids = [aws_security_group.sg.id]
-  key_name               = "nishanthkey"
+  key_name               = "jhoneykey"
  tags = {
     Name = "ansible_server"
   }
@@ -145,7 +145,7 @@ resource "aws_instance" "ubuntu2" {
   associate_public_ip_address = true
   subnet_id = aws_subnet.Pub.id
   vpc_security_group_ids = [aws_security_group.sg_1.id]
-  key_name               = "nishanthkey"
+  key_name               = "jhoneykey"
  tags = {
     Name = "apache_server"
   }
@@ -162,7 +162,7 @@ resource "aws_instance" "ubuntu_3" {
   associate_public_ip_address = true
   subnet_id = aws_subnet.Pub.id
   vpc_security_group_ids = [aws_security_group.sg.id]
-  key_name               = "nishanthkey"
+  key_name               = "jhoneykey"
  tags = {
     Name = "k8worker_server"
   }
@@ -173,7 +173,7 @@ resource "aws_instance" "ubuntu_4" {
   associate_public_ip_address = true
   subnet_id = aws_subnet.Pub.id
   vpc_security_group_ids = [aws_security_group.sg.id]
-  key_name               = "nishanthkey"
+  key_name               = "jhoneykey"
  tags = {
     Name = "k8master_server"
   }
